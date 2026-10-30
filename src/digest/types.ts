@@ -35,10 +35,6 @@ export class MissingNightError extends Error {
   }
 }
 
-// Signature only. Issue #2 fills this in. Rows come back sorted by job.
+// Implemented in read.ts. Rows come back sorted by job.
 // A missing file throws MissingNightError. A bad line is counted, never thrown.
-export function readNight(runsDir: string, night: string): NightDigest {
-  void runsDir;
-  void night;
-  throw new Error('readNight is not implemented');
-}
+export { readNight } from './read.js';
